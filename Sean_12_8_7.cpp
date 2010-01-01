@@ -1,0 +1,49 @@
+// Sean Gilleran
+// 12.8.7 Bit Operation Calculator
+// Sean_12_8_7.cpp
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string DecToBin( unsigned int decimal )
+{
+	// Explanation:
+	//  http://www.trunix.org/programlama/cpp/fred/notes/cpp/misc/decimal2binary.html
+
+	string binary = "";
+
+	while( decimal > 0 )
+	{
+		// Insert the current decimal # at the beginning of the string
+		binary.insert( binary.begin(), static_cast <char> ( ( decimal % 2 ) + '0' ) );
+		decimal /= 2;
+	}
+
+	if( binary == "" ) binary = "0";
+	return binary;
+}
+
+int main()
+{
+	unsigned int A = 0;
+	unsigned int B = 0;
+
+	cout << "Enter a number A in the range [0, 4294967295]: ";
+	cin >> A;
+	cout << "Enter a number B in the range [0, 4294967295]: ";
+	cin >> B;
+	cout << endl;
+
+	cout << "      A = " << DecToBin( A ) << endl;
+	cout << "      B = " << DecToBin( B ) << endl;
+	cout << "  A & B = " << DecToBin( A & B ) << endl;
+	cout << "  A | B = " << DecToBin( A | B ) << endl;
+	cout << "  A ^ B = " << DecToBin( A ^ B ) << endl;
+	cout << "     ~A = " << DecToBin( ~A ) << endl;
+	cout << "     ~B = " << DecToBin( ~B ) << endl;
+	cout << " A << B = " << DecToBin( A << B ) << endl;
+	cout << " A >> B = " << DecToBin( A >> B ) << endl;
+	
+	return 0;
+}

@@ -1,0 +1,18 @@
+
+Engineer
+Bannings George
+Salary: 10000
+CPP: Yes
+Experience: 15
+Type: Electrical
+Engineer
+Bottoms Frederick
+Salary: 10000
+CPP: No
+Experience: 15
+Type: Fantastic
+Manager
+Lopez George
+Salary: 10000
+Meetings: 1
+Vacation: 1
